@@ -10,4 +10,23 @@ class BalancedBracketsTest {
     public void emptyTest() {
         assertEquals(true, true);
     }
+
+    @Test
+    public void onlyBracketsReturnsTrue() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
+    }
+
+    @Test
+    public void closeBeforeOpenBracketReturnsFalse(){
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
+    }
+    @Test
+    public void onlyLetters() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("abcdefg"));
+    }
+
+
+
 }
+
+
